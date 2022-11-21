@@ -1,0 +1,56 @@
+{% extends 'main/layout.html' %}
+
+{% block title  %}{{title}}{% endblock %}
+
+{% block content %}
+<div class="features">
+    <H1>Товары </H1>
+    <table>
+        <tr>
+            <th>{{' '}}</th>
+            <th>{{'№'}}</th>
+            <th>{{'Группа'}}</th>
+            <th>{{'UUID'}}</th>
+            <th>{{'Тип'}}</th>
+            <th>{{'Код'}}</th>
+            <th>{{'Название'}}</th>
+            <th>{{'Изображение'}}</th>
+            <th>{{'Описание'}}</th>
+            <th>{{'Внешний код'}}</th>
+            <th>{{'Артикул'}}</th>
+            <th>{{'Цена'}}</th>
+            <th>{{'Валюта'}}</th>
+            <th>{{'Закупочная цена'}}</th>
+            <th>{{'Закупочная валюта'}}</th>
+            <th>{{'Штрих код'}}</th>
+            <th>{{'кол-во'}}</th>
+            <th>{{'Дата '}}</th>
+
+            {% for el in product %}
+        </tr>
+        <tr>
+            <td>{{el.public}}</td>
+            <td>{{el.id}}</td>
+            <td>{{el.group}}</td>
+            <td>{{el.UUID}}</td>
+            <td>{{el.type}}</td>
+            <td>{{el.cod}}</td>
+            <td>{{el.name}}</td>
+            <td>{{el.discription}}</td>
+            <td>{{el.out_cod}}</td>
+            <td>{{el.article}}</td>
+            <td>{{el.price}}</td>
+            <td>{{el.valut}}</td>
+            <td>{{el.in_price}}</td>
+            <td>{{el.valut_in_price}}</td>
+            <td>{{el.shtrih}}</td>
+            <td>{{el.date}}</td>
+                                                                                                                    </tr>
+            {% endfor %}
+        </div>
+    </table>
+</div>
+
+
+
+ {% endblock %}
