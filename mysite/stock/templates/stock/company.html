@@ -1,0 +1,41 @@
+{% extends 'main/layout.html' %}
+
+{% block title  %}{{title}}{% endblock %}
+
+{% block content %}
+<div class="features">
+    <H1>Контрагенты </H1>
+    <table>
+        <tr>
+
+            <th>{{'№'}}</th>
+            <th>{{'ИИН'}}</th>
+            <th>{{'Наименование'}}</th>
+            <th>{{'Адрес'}}</th>
+            <th>{{'Банк'}}</th>
+            <th>{{'БИК'}}</th>
+            <th>{{'ИИК'}}</th>
+            <th>{{'Телефон'}}</th>
+            <th>{{'Контакт'}}</th>
+            <th>{{'email'}}</th>
+        </tr>
+            {% for el in product %}
+        <tr>
+            <td>{{el.iin}}</td>
+            <td>{{el.name}}</td>
+            <td>{{el.address}}</td>
+            <td>{{el.bik}}</td>
+            <td>{{el.iik}}</td>
+            <td>{{el.phone}}</td>
+            <td>{{el.contact}}</td>
+            <td>{{el.email}}</td>
+        </tr>
+                                                                                                                 </tr>
+            {% endfor %}
+        </div>
+    </table>
+</div>
+
+
+
+ {% endblock %}
